@@ -1,81 +1,164 @@
 <!DOCTYPE html>
-<html lang = "en">
-
-
+<html lang="en">
 <head>
-<title>CSIT 281 - JavaScript </title>
+<title>CSIT 281 - JavaScript</title>
+
 <style>
-h1{
+
+h1 {
   color: #CC0000;
   font-size: 40px;
 }
-p{
+
+p {
   font-weight: bold;
-  /*border: solid 1px #CC0000;
-  border-color: #00CC00;*/
+/*  border: solid 1px #CC0000;
+  border-color: #00CC00; */
 }
+
+.page-title {
+  color: #00CCCC;
+}
+
 </style>
+
 </head>
-
-
 <body>
+
 <h1>CSIT 281 - JavaScript</h1>
 
 <p>Welcome!</p>
 
-<p>Today we are going to start using the JavaScript console to display data.</p>
+<p>Today were are going to start using the JavaScript console to display data.</p>
 
-<p> To view your JavaScript console, right click and select Inspect. Choose the
-  Console tab. You should see the console.log data printed in the console.</p>
-
-<script type="text/javascript">
-console.log(4);
+<p>To view your JavaScript console. Right click and select Inspect. Choose the
+   Console tab. You should see the console.log data printed in the console.</p>
 
 
-let number = 3
-console.log(number * 4);
+   <script type="text/javascript">
 
-console.log('He said "Hey"');
-
-
-
-let z = true;
-z = false;
-
-if(z === true){
-  console.log('You can see the game!');
-}
-
-if(z === false){
-  console.log('Not old enough.');
-}
+   let pageView = 0;
+   let pageTitle = 'My Title';
+   let pageAuthor = 'Richie Leahey';
 
 
-var y = true;
-y = false;
+    function pageTitles() {
+      document.write(pageTitle);
+    }
 
-if(y === true){
-  console.log('You can see the game!');
-}
+    function pageAuthors() {
+      document.write(pageAuthor);
+    }
 
-if(y === false){
-  console.log('Not old enough.');
-}
+    function pageViews() {
+      pageView++;
+      document.write(pageView);
+    }
 
-var x = 12;
+    </script>
 
-console.log(x);
 
-// var x = 1;
-var x = 3;
 
-console.log(x);
-console.log(x);
-console.log(x);
+    <h1 class="page-title"><script>pageTitles();</script></h1>
+
+    <p>by: <script>pageAuthors();</script></p>
+
+
+
+    <small><script>pageViews();</script></small>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+
+    function myAlert(){
+
+      let alertNumber = 1;
+
+      if (alertNumber <= 3) {
+        alert('Oh No!');
+      } else {
+        alert('Finally Over!');
+      }
+
+      alertNumber++;
+
+      alert(alertNumber);
+    }
+ //     myAlert();
+
 
 </script>
 
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+ console.log(4);
+
+ let number = 3;
+
+ console.log(number * 4);
+
+ console.log('He said "Hey!"');
+
+ let z = true;
+  z = false;
+
+
+ if (z === true) {
+   console.log('You can see the game!');
+ }
+
+ if (z === false) {
+   console.log('Not old enough.');
+ }
+
+ var y = true;
+  y = false;
+
+
+ if (y === true) {
+   console.log('You can see the game!');
+ }
+
+ if (y === false) {
+   console.log('Not old enough.');
+ }
+
+
+ var x = 12;
+
+ console.log(x);
+
+ // var x = 1;
+ var x = 3;
+
+ console.log(x);
+ console.log(x);
+ console.log(x);
+
+</script>
+
+
+
 </body>
-
-
 </html>

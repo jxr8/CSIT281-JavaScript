@@ -38,12 +38,13 @@ p {
    <script type="text/javascript">
 
    let pageView = 0;
-   let siteTitle = "Robinson.net";
+   let siteTitle = "Leahey.net";
    let pageTitle = 'My Title';
    let pageAuthor = 'Richie Leahey';
 
 
     function pageTitles() {
+
       document.write(pageTitle);
     }
 
@@ -52,18 +53,35 @@ p {
     }
 
     function pageViews() {
-      pageView++;
-      document.write(pageView);
+      pageView++; // Increases the pageView variable by one.
+      document.write(pageView); // Writing the pageView number to the website.
     }
 
     </script>
 
+    <ul>
+      <li>About</li>
+      <li>Portfolio</li>
+      <li>Contact</li>
+    </ul>
 
-<ul>
-  <li>About</li>
-  <li>Portfolio</li>
-  <li>Contact</li>
-</ul>
+    <script>
+
+    let websiteMenu = ['About', 'Portfolio', 'Contact', 'Classwork'];
+
+    document.write(websiteMenu);
+
+    </script>
+<p>
+    <script>
+
+
+    document.write(websiteMenu[2]);
+
+
+
+    </script>
+</p>
 
 
     <h1 class="page-title"><script>pageTitles();</script></h1>
@@ -89,7 +107,7 @@ p {
 
     function myAlert(){
 
-      let alertNumber = 1;
+      let alertNumber = 4;
 
       if (alertNumber <= 3) {
         alert('Oh No!');
@@ -99,10 +117,18 @@ p {
 
       alertNumber++;
 
-      alert(alertNumber);
     }
- //     myAlert();
+      myAlert();
 
+    function myAlertLoop(){
+
+      for (let alertLoopNumber = 1; alertLoopNumber <= 3;) {
+        document.write('please restart your computer ');
+      }
+
+    }
+
+    myAlertLoop();
 
 </script>
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 8: CSIT 281 - JavaScript</title>
+
+
+<style>
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<form>
+
+
+
+Select your favorite season to change the website theme:
+
+<select id="background" onchange="updateBackgroundColor(this)">
+  <option value="#FFFF00">Spring</option>
+  <option value="#ADD8E6">Summer</option>
+  <option value="#FFA500">Fall</option>
+  <option value="#FF0000">Winter</option>
+
+</select>
+
+</form>
+
+
+
+<script>
+
+// Extend the example from the class lecture to use the dropdown to
+// have the user select their favorite. When the season is selected change
+// the background color, add and image and have it change and text and have
+// it change to match the selected season.
+
+function updateBackgroundColor(selectElem) {
+  var i = selectElem.selectedIndex;
+  if (i < 0) {
+    return;
+  }
+  document.body.style.backgroundColor = selectElem.options[i].value;
+}
+
+
+</script>
+
+
+
+
+</body>
+
+</html>

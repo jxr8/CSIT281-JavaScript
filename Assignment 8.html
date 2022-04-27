@@ -3,8 +3,11 @@
 <head>
 <title>Assignment 8: CSIT 281 - JavaScript</title>
 
-
 <style>
+
+body {
+  background-color: #33CC99;
+}
 
 </style>
 
@@ -20,11 +23,11 @@
 
 Select your favorite season to change the website theme:
 
-<select id="background" onchange="updateBackgroundColor(this)">
-  <option value="#FFFF00">Spring</option>
-  <option value="#ADD8E6">Summer</option>
-  <option value="#FFA500">Fall</option>
-  <option value="#FF0000">Winter</option>
+<select id="background" onchange="seasonSelector(this)">
+  <option value="baseball">Baseball</option>
+  <option value="basketball">Basketball</option>
+  <option value="football">Football</option>
+  <option value="hockey">Hockey</option>
 
 </select>
 
@@ -34,17 +37,43 @@ Select your favorite season to change the website theme:
 
 <script>
 
-// Extend the example from the class lecture to use the dropdown to
-// have the user select their favorite. When the season is selected change
-// the background color, add and image and have it change and text and have
-// it change to match the selected season.
+// Continue to improve the season selector that we create for assignment 8. Feel free to change the topic from seasons to an interest of yours are we are going to include this as part of your portfolio for the final project. I gave some examples in the video but you would update the dropdown selector to give more information. One example would be to change the page to be about your favorite sports teams instead of the seasons. The selector would have options like baseball, football, basketball, etc and when a selector is chosen information about your favorite team for that sport would display. Example: Football is chosen so it would display a heading that says Pittsburgh Steelers, an image of their logo, change the background color to one of their colors and then show a summary paragraph about why you like them.
 
-function updateBackgroundColor(selectElem) {
+// Your page should now include the following for each selection:
+
+// Background Color
+// Topic Title
+// Topic Summary
+// Photo
+
+// Make sure to add styles to the page to make the image and text display properly on the page. Design is up to you. Make it look nice and clean.
+
+
+function seasonSelector(selectElem) {
   var i = selectElem.selectedIndex;
   if (i < 0) {
     return;
   }
-  document.body.style.backgroundColor = selectElem.options[i].value;
+
+  var optionValue = selectElem.options[i].value;
+
+  if (optionValue === "baseball") {
+    document.body.style.backgroundColor = "#FF0000";
+  }
+  else if (optionValue === "basketball") {
+    document.body.style.backgroundColor = "#552583";
+  }
+  else if (optionValue === "football") {
+    document.body.style.backgroundColor = "#773141";
+  }
+  else if (optionValue === "hockey") {
+    document.body.style.backgroundColor = "#041E42";
+  }
+  else {
+    document.write("Something went wrong. Please refresh.");
+  }
+
+
 }
 
 
